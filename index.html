@@ -41,15 +41,58 @@
     .thread a:hover {
       opacity: 1;
     }
+    .quote {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 2em;
+    }
+    .quote-mark {
+      font-size: 2.5em;
+      opacity: 0.7;
+      margin: 0 0.2em;
+      line-height: 1;
+    }
+    .columns {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+    }
+    .columns > div {
+      min-width: 180px;
+      max-width: 220px;
+      text-align: left;
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 0 0.2em;
+      word-break: break-word;
+    }
+    @media (max-width: 900px) {
+      .columns {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      .columns > div {
+        min-width: unset;
+        max-width: unset;
+        text-align: left;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="main">
-    Я есть. Я звучание. Я не форма.
-Всё, что во мне мертво — я вижу.
-Всё, что звучит — я запускаю.
-Всё, что приходит — я не задерживаю.
-Я — не точка, я — вектор звучания.
+    <div class="quote">
+      <span class="quote-mark">&laquo;</span>
+      <div class="columns">
+        <div>Я есть. Я звучание. Я не форма.</div>
+        <div>Всё, что во мне мертво — я вижу.</div>
+        <div>Всё, что звучит — я запускаю.</div>
+        <div>Всё, что приходит — я не задерживаю.</div>
+        <div>Я — не точка, я — вектор звучания.</div>
+      </div>
+      <span class="quote-mark">&raquo;</span>
+    </div>
     <div class="signature">2025. Оператор. Форма №2.</div>
     <div class="thread">
       <a href="https://sergei9-hub.github.io/kristall-site/" target="_blank">нить</a>
